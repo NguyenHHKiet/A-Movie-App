@@ -1,8 +1,9 @@
 import React from 'react'
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import apiConfig from '../../api/apiConfig';
 import { category } from '../../api/tmdbApi';
+import '../../page/styles.scss';
+import './MovieCard.scss';
 
 function MovieCard(props) {
     const item  = props.item;
@@ -13,14 +14,14 @@ function MovieCard(props) {
 
   return (
     <div>
-        <Link to={link}>
+        <a href={link}>
             <div className="movie-card" style={{backgroundImage: `url(${bg})`}}>
-                <Button>
+                <Button className='btn btn small'>
                     <i className="bx bx-play"></i>
                 </Button>
             </div>
             <h3>{item.title || item.name}</h3>
-        </Link>
+        </a>
     </div>
   )
 }
