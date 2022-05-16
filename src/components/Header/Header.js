@@ -11,7 +11,7 @@ function Header() {
             <div className='logo'>
                 <img src={logo} alt=''/>
                 <Navbar.Brand>
-                    <Nav.Link to='/'>tMovies</Nav.Link>
+                    <Nav.Link href='/'>tMovies</Nav.Link>
                 </Navbar.Brand>
             </div>
 
