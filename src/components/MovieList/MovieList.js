@@ -32,16 +32,19 @@ function MovieList(props) {
 
   return (
     <div className="movie-list">
-        <Swiper grabCursor={true} spaceBetween={30} 
-            slidesPerView={3} slidesPerGroup={3} loop={true}
-            loopFillGroupWithBlank={true}>
+        <Swiper grabCursor={true} spaceBetween={30} slidesPerView={3}>
+        
             {
                 items.map((item, i) => (
-                    <SwiperSlide key={i}>
+                    
+                    <SwiperSlide key={i} className='swiper-slide'>
                         <MovieCard item={item} category={props.category}/>
                     </SwiperSlide>
+                    
+                    
                 ))
             }
+        
         </Swiper>
     </div>
   )
